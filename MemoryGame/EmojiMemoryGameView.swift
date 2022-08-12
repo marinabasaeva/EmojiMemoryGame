@@ -10,10 +10,13 @@ import SwiftUI
 struct EmojiMemoryGameView: View {
     
     @ObservedObject var game: EmojiMemoryGame
+    @State var currentDate = Date()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
             gameBody
+            timerView
         }
         .padding()
     }
@@ -35,6 +38,15 @@ struct EmojiMemoryGameView: View {
             }
         }
         .foregroundColor(.blue)
+    }
+    
+    var timerView: some View {
+
+            Text("\(currentDate)")
+                .onReceive(timer) { input in
+                    currentDate = input
+                }
+        
     }
     
 }
