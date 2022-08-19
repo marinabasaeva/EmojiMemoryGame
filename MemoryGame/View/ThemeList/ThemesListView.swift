@@ -16,26 +16,17 @@ struct ThemesListView: View {
             List {
                 ForEach(themeViewModel.themes) { theme in
                     NavigationLink(destination: EmojiMemoryGameView(game: EmojiMemoryGame(theme: theme))) {
-                        Text(theme.title)
+                        Text(theme.title).font(.headline)
+                        
                     }
                 }
-                
-//                ForEach(themeViewModel.themes) { theme in
-//
-//                    NavigationLink {
-//                        EmojiMemoryGameView(game: EmojiMemoryGame())
-//
-//                    } label: {
-//
-//                        Text(theme.title)
-//
-//                    }
-
-//                }
             }
+            .navigationBarTitle("Emoji Memory Game")
         }
     }
 }
+
+
 
 struct OptionsListView_Previews: PreviewProvider {
     static var previews: some View {

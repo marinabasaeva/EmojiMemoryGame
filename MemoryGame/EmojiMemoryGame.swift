@@ -25,20 +25,20 @@ class EmojiMemoryGame: ObservableObject {
     static func createMemoryGame(with theme: Theme) -> MemoryGame<String> {
         let emojis = theme.emojis.shuffled()
         
-        return MemoryGame<String>(numberOfPairsOfCards: 8) { pairIndex in
+        return MemoryGame<String>(numberOfPairsOfCards: 10) { pairIndex in
             emojis[pairIndex]
             
         }
     }
-   
-//    var cards: Array<Card> {
-//        model.cards
-//    }
-//
+ 
     // MARK: - Intent(s)
     
     func choose(_ card: Card) {
         model.choose(card)
+    }
+    
+    func newGame() {
+        model = EmojiMemoryGame.createMemoryGame(with: theme)
     }
     
 }

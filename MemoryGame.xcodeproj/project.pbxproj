@@ -18,7 +18,6 @@
 		541254DE28A2B4CB00CA6DCE /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541254DD28A2B4CB00CA6DCE /* Cardify.swift */; };
 		541254E028A3F8EF00CA6DCE /* ThemesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541254DF28A3F8EF00CA6DCE /* ThemesListView.swift */; };
 		541254E228A3FBDA00CA6DCE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541254E128A3FBDA00CA6DCE /* Theme.swift */; };
-		541254EA28A4044F00CA6DCE /* SampleViewDeleteThisLater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541254E928A4044F00CA6DCE /* SampleViewDeleteThisLater.swift */; };
 		541254EC28A6BBBE00CA6DCE /* ThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 541254EB28A6BBBE00CA6DCE /* ThemeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +34,6 @@
 		541254DD28A2B4CB00CA6DCE /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		541254DF28A3F8EF00CA6DCE /* ThemesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesListView.swift; sourceTree = "<group>"; };
 		541254E128A3FBDA00CA6DCE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		541254E928A4044F00CA6DCE /* SampleViewDeleteThisLater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewDeleteThisLater.swift; sourceTree = "<group>"; };
 		541254EB28A6BBBE00CA6DCE /* ThemeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +109,6 @@
 		541254E528A3FC6300CA6DCE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				541254E928A4044F00CA6DCE /* SampleViewDeleteThisLater.swift */,
 				541254E628A3FC8000CA6DCE /* ThemeList */,
 			);
 			path = View;
@@ -198,7 +195,6 @@
 			files = (
 				541254E228A3FBDA00CA6DCE /* Theme.swift in Sources */,
 				541254DC28A2AB3F00CA6DCE /* Pie.swift in Sources */,
-				541254EA28A4044F00CA6DCE /* SampleViewDeleteThisLater.swift in Sources */,
 				541254DE28A2B4CB00CA6DCE /* Cardify.swift in Sources */,
 				541254D6289D58CB00CA6DCE /* MemoryGame.swift in Sources */,
 				541254E028A3F8EF00CA6DCE /* ThemesListView.swift in Sources */,

@@ -11,13 +11,16 @@ struct EmojiMemoryGameView: View {
     
     @ObservedObject var game: EmojiMemoryGame
     @State var currentDate = Date()
+    @State var timeRemaining = 100
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack {
             gameBody
             timerView
+            newGame
         }
+//        .padding(.top, 15)
         .padding()
     }
     
@@ -42,11 +45,30 @@ struct EmojiMemoryGameView: View {
     
     var timerView: some View {
 
-            Text("\(currentDate)")
-                .onReceive(timer) { input in
-                    currentDate = input
+            Text("Time: \(timeRemaining)")
+                .onReceive(timer) { _ in
+                    if timeRemaining > 0 {
+                        timeRemaining -= 1
+                    }
                 }
-        
+
+    }
+    
+    var newGame: some View {
+        Button(action: {
+            withAnimation {
+                game.newGame()
+                
+            }
+        }) {
+            Text("New Game")
+                .foregroundColor(.white)
+                .padding(.horizontal, 30)
+                .padding(.vertical, 15)
+                .background(RoundedRectangle(cornerRadius: 15).fill(.red))
+                
+        }
+        .padding(.top, 10)
     }
     
 }
@@ -57,8 +79,8 @@ struct CardView: View {
     var body: some View {
         GeometryReader {geometry in
             ZStack {
-                Pie(startAngle: Angle(degrees: 0-90), endAngle: Angle(degrees: 110-90))
-                    .padding(5).opacity(0.5)
+//                Pie(startAngle: Angle(degrees: 0-90), endAngle: Angle(degrees: 110-90))
+//                    .padding(5).opacity(0.5)
                 Text(card.content)
                     .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
                     .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
